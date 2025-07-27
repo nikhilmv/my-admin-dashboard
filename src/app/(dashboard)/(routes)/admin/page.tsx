@@ -1,6 +1,6 @@
  
 
-export default async function Dashboard() {
+export default async function Admin() {
  
 
  

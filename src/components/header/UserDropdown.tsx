@@ -4,9 +4,14 @@ import Link from "next/link";
 import React, { useState } from "react";
 import { Dropdown } from "../ui/dropdown/Dropdown";
 import { DropdownItem } from "../ui/dropdown/DropdownItem";
+import { log } from "console";
+import { RootState } from '../../app/store/store';  
+import { useSelector } from 'react-redux';
+import { useRouter } from 'next/navigation';
 
 export default function UserDropdown() {
   const [isOpen, setIsOpen] = useState(false);
+  const router = useRouter();
 
 function toggleDropdown(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) {
   e.stopPropagation();
@@ -16,6 +21,15 @@ function toggleDropdown(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) {
   function closeDropdown() {
     setIsOpen(false);
   }
+
+  const selectAdmininfo = (state: RootState) => state.adminauth.admin;
+    const adminInfo = useSelector(selectAdmininfo);
+console.log('Admin Info:', adminInfo);
+
+  if (!adminInfo) { 
+     router.push('/login');
+  }
+  
   return (
     <div className="relative">
       <button
@@ -23,15 +37,21 @@ function toggleDropdown(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) {
         className="flex items-center text-gray-700 dark:text-gray-400 dropdown-toggle"
       >
         <span className="mr-3 overflow-hidden rounded-full h-11 w-11">
-          <Image
+ 
+          <img
+            src={
+              adminInfo?.profilePic === null
+                ? "https://cdn-icons-png.flaticon.com/512/149/149071.png"
+                : `${process.env.REACT_APP_BASE_URL}/uploads/${adminInfo?.profilePic}`
+            }
+            alt="user"
             width={44}
             height={44}
-            src="/images/user/owner.jpg"
-            alt="User"
           />
+
         </span>
 
-        <span className="block mr-1 font-medium text-theme-sm">Musharof</span>
+        <span className="block mr-1 font-medium text-theme-sm"> {adminInfo?.name}</span>
 
         <svg
           className={`stroke-gray-500 dark:stroke-gray-400 transition-transform duration-200 ${
@@ -60,10 +80,11 @@ function toggleDropdown(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) {
       >
         <div>
           <span className="block font-medium text-gray-700 text-theme-sm dark:text-gray-400">
-            Musharof Chowdhury
+            {adminInfo?.name}
           </span>
           <span className="mt-0.5 block text-theme-xs text-gray-500 dark:text-gray-400">
-            randomuser@pimjo.com
+            {adminInfo?.email}
+
           </span>
         </div>
 

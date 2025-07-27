@@ -6,3 +6,5 @@ export const store = configureStore({
     adminauth: adminauthSliceReducer,
   },
 });
+
+export type RootState = ReturnType<typeof store.getState>;

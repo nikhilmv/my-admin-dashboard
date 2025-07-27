@@ -2,13 +2,13 @@
 // import Checkbox from "@/components/form/input/Checkbox";
 // import Input from "@/components/form/input/InputField";
 // import Label from "@/components/form/Label";
-  import { useDispatch } from 'react-redux'; 
+import { useDispatch } from 'react-redux'; 
 import { useRouter } from 'next/navigation';
 import Link from "next/link";
 import React, { useState } from "react";
 import axios from 'axios';
-import { adminLoggedin } from '../../store/features/auth/adminauthSlice';  
-
+import { adminLoggedin } from '../../store/features/auth/adminauthSlice';   
+import api from '../../../lib/axios'; // Adjust the import path as necessary
 
  
 export default function LoginPage() {
@@ -29,12 +29,14 @@ export default function LoginPage() {
         password, 
       };
        try {
-        const res = await axios.post('/api/login', form);
+ 
+       const res =  await api.post('/login', form);
+
         dispatch(adminLoggedin({
               accessToken: res.data.accessToken,
               admin: res.data.user,
               isAdminAuthenticated: true}));
-        router.push('/dashboard');
+        router.push('/admin');
       } catch (err) {
    
            console.log('Login failed', err);

@@ -4,9 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useSidebar } from "@/context/SidebarContext";
- 
-import SidebarWidget from "./SidebarWidget";
-
+  
 type NavItem = {
   name: string;
   icon: React.ReactNode;
@@ -23,23 +21,32 @@ const navItems: NavItem[] = [
     name: "Dashboard",
     subItems: [{ name: "Ecommerce", path: "/", pro: false }],
   },
+  // {
+  //   icon: <img
+  //         src="/icons/calender-line.svg" 
+  //         style={{ display: 'inline-block' }}
+  //       />,
+  //   name: "Calendar",
+  //   path: "/calendar",
+  // },
+  // {
+  //   icon: <img
+  //         src="/icons/user-circle.svg" 
+  //         style={{ display: 'inline-block' }}
+  //       />,
+  //   name: "User Profile",
+  //   path: "/profile",
+  // },
   {
+    name:"users",
     icon: <img
-          src="/icons/calender-line.svg" 
+          src="/icons/list.svg" 
           style={{ display: 'inline-block' }}
-        />,
-    name: "Calendar",
-    path: "/calendar",
+        />, 
+    subItems: [
+      { name: "List users", path: "/users/listusers", pro: false }, 
+    ],
   },
-  {
-    icon: <img
-          src="/icons/user-circle.svg" 
-          style={{ display: 'inline-block' }}
-        />,
-    name: "User Profile",
-    path: "/profile",
-  },
-
   {
     name: "Forms",
     icon: <img
@@ -56,57 +63,57 @@ const navItems: NavItem[] = [
         />,
     subItems: [{ name: "Basic Tables", path: "/basic-tables", pro: false }],
   },
-  {
-    name: "Pages",
-    icon: <img
-          src="/icons/page.svg" 
-          style={{ display: 'inline-block' }}
-        />,
-    subItems: [
-      { name: "Blank Page", path: "/blank", pro: false },
-      { name: "404 Error", path: "/error-404", pro: false },
-    ],
-  },
+  // {
+  //   name: "Pages",
+  //   icon: <img
+  //         src="/icons/page.svg" 
+  //         style={{ display: 'inline-block' }}
+  //       />,
+  //   subItems: [
+  //     { name: "Blank Page", path: "/blank", pro: false },
+  //     { name: "404 Error", path: "/error-404", pro: false },
+  //   ],
+  // },
 ];
 
 const othersItems: NavItem[] = [
-  {
-    icon: <img
-          src="/icons/pie-chart.svg" 
-          style={{ display: 'inline-block' }}
-        />,
-    name: "Charts",
-    subItems: [
-      { name: "Line Chart", path: "/line-chart", pro: false },
-      { name: "Bar Chart", path: "/bar-chart", pro: false },
-    ],
-  },
-  {
-    icon: <img
-          src="/icons/box-cube.svg" 
-          style={{ display: 'inline-block' }}
-        />,
-    name: "UI Elements",
-    subItems: [
-      { name: "Alerts", path: "/alerts", pro: false },
-      { name: "Avatar", path: "/avatars", pro: false },
-      { name: "Badge", path: "/badge", pro: false },
-      { name: "Buttons", path: "/buttons", pro: false },
-      { name: "Images", path: "/images", pro: false },
-      { name: "Videos", path: "/videos", pro: false },
-    ],
-  },
-  {
-    icon: <img
-          src="/icons/plug-in.svg" 
-          style={{ display: 'inline-block' }}
-        />,
-    name: "Authentication",
-    subItems: [
-      { name: "Sign In", path: "/signin", pro: false },
-      { name: "Sign Up", path: "/signup", pro: false },
-    ],
-  },
+  // {
+  //   icon: <img
+  //         src="/icons/pie-chart.svg" 
+  //         style={{ display: 'inline-block' }}
+  //       />,
+  //   name: "Charts",
+  //   subItems: [
+  //     { name: "Line Chart", path: "/line-chart", pro: false },
+  //     { name: "Bar Chart", path: "/bar-chart", pro: false },
+  //   ],
+  // },
+  // {
+  //   icon: <img
+  //         src="/icons/box-cube.svg" 
+  //         style={{ display: 'inline-block' }}
+  //       />,
+  //   name: "UI Elements",
+  //   subItems: [
+  //     { name: "Alerts", path: "/alerts", pro: false },
+  //     { name: "Avatar", path: "/avatars", pro: false },
+  //     { name: "Badge", path: "/badge", pro: false },
+  //     { name: "Buttons", path: "/buttons", pro: false },
+  //     { name: "Images", path: "/images", pro: false },
+  //     { name: "Videos", path: "/videos", pro: false },
+  //   ],
+  // },
+  // {
+  //   icon: <img
+  //         src="/icons/plug-in.svg" 
+  //         style={{ display: 'inline-block' }}
+  //       />,
+  //   name: "Authentication",
+  //   subItems: [
+  //     { name: "Sign In", path: "/signin", pro: false },
+  //     { name: "Sign Up", path: "/signup", pro: false },
+  //   ],
+  // },
 ];
 
 const AppSidebar: React.FC = () => {
@@ -380,7 +387,7 @@ const AppSidebar: React.FC = () => {
               {renderMenuItems(navItems, "main")}
             </div>
 
-            <div className="">
+            {/* <div className="">
               <h2
                 className={`mb-4 text-xs uppercase flex leading-[20px] text-gray-400 ${
                   !isExpanded && !isHovered
@@ -400,10 +407,10 @@ const AppSidebar: React.FC = () => {
                 )}
               </h2>
               {renderMenuItems(othersItems, "others")}
-            </div>
+            </div> */}
           </div>
         </nav>
-        {isExpanded || isHovered || isMobileOpen ? <SidebarWidget /> : null}
+       
       </div>
     </aside>
   );
