@@ -23,8 +23,7 @@ function toggleDropdown(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) {
   }
 
   const selectAdmininfo = (state: RootState) => state.adminauth.admin;
-    const adminInfo = useSelector(selectAdmininfo);
-console.log('Admin Info:', adminInfo);
+    const adminInfo = useSelector(selectAdmininfo); 
 
   if (!adminInfo) { 
      router.push('/login');
