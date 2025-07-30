@@ -163,9 +163,13 @@ const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     try { 
       const res =  await api.post('/user/addadminuser', formData);  
       console.log('Login successful', res);
-      
-      router.push('/users/listusers');
-    } catch (err) { 
+        if (res.data.success) {
+            router.push('/users/listusers'); 
+        } else {
+         console.log('Failed to add user', res.data.message);
+         
+        }
+    } catch (err) {      
         console.log('Login failed', err);
     }
  
