@@ -12,31 +12,15 @@ type NavItem = {
   subItems?: { name: string; path: string; pro?: boolean; new?: boolean }[];
 };
 
-const navItems: NavItem[] = [
-  {
-    icon:<img
+const navItems: NavItem[] = [ 
+   {
+    icon: <img
           src="/icons/grid.svg" 
           style={{ display: 'inline-block' }}
         />,
     name: "Dashboard",
-    subItems: [{ name: "Ecommerce", path: "/", pro: false }],
+    path: "/admin",
   },
-  // {
-  //   icon: <img
-  //         src="/icons/calender-line.svg" 
-  //         style={{ display: 'inline-block' }}
-  //       />,
-  //   name: "Calendar",
-  //   path: "/calendar",
-  // },
-  // {
-  //   icon: <img
-  //         src="/icons/user-circle.svg" 
-  //         style={{ display: 'inline-block' }}
-  //       />,
-  //   name: "User Profile",
-  //   path: "/profile",
-  // },
   {
     name:"users",
     icon: <img
@@ -47,34 +31,8 @@ const navItems: NavItem[] = [
       { name: "List users", path: "/users/listusers", pro: false }, 
       { name: "Add user", path: "/users/adduser", pro: false }, 
     ],
-  },
-  {
-    name: "Forms",
-    icon: <img
-          src="/icons/list.svg" 
-          style={{ display: 'inline-block' }}
-        />,
-    subItems: [{ name: "Form Elements", path: "/form-elements", pro: false }],
-  },
-  {
-    name: "Tables",
-    icon: <img
-          src="/icons/table.svg" 
-          style={{ display: 'inline-block' }}
-        />,
-    subItems: [{ name: "Basic Tables", path: "/basic-tables", pro: false }],
-  },
-  // {
-  //   name: "Pages",
-  //   icon: <img
-  //         src="/icons/page.svg" 
-  //         style={{ display: 'inline-block' }}
-  //       />,
-  //   subItems: [
-  //     { name: "Blank Page", path: "/blank", pro: false },
-  //     { name: "404 Error", path: "/error-404", pro: false },
-  //   ],
-  // },
+  }, 
+ 
 ];
 
 const othersItems: NavItem[] = [
@@ -89,32 +47,8 @@ const othersItems: NavItem[] = [
   //     { name: "Bar Chart", path: "/bar-chart", pro: false },
   //   ],
   // },
-  // {
-  //   icon: <img
-  //         src="/icons/box-cube.svg" 
-  //         style={{ display: 'inline-block' }}
-  //       />,
-  //   name: "UI Elements",
-  //   subItems: [
-  //     { name: "Alerts", path: "/alerts", pro: false },
-  //     { name: "Avatar", path: "/avatars", pro: false },
-  //     { name: "Badge", path: "/badge", pro: false },
-  //     { name: "Buttons", path: "/buttons", pro: false },
-  //     { name: "Images", path: "/images", pro: false },
-  //     { name: "Videos", path: "/videos", pro: false },
-  //   ],
-  // },
-  // {
-  //   icon: <img
-  //         src="/icons/plug-in.svg" 
-  //         style={{ display: 'inline-block' }}
-  //       />,
-  //   name: "Authentication",
-  //   subItems: [
-  //     { name: "Sign In", path: "/signin", pro: false },
-  //     { name: "Sign Up", path: "/signup", pro: false },
-  //   ],
-  // },
+ 
+ 
 ];
 
 const AppSidebar: React.FC = () => {
