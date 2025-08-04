@@ -3,8 +3,10 @@ import React, { useEffect, useRef, useState,useCallback } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { useSidebar } from "@/context/SidebarContext";
+import { useSidebar } from "@/context/SidebarContext"; 
+ 
   
+
 type NavItem = {
   name: string;
   icon: React.ReactNode;
@@ -12,6 +14,8 @@ type NavItem = {
   subItems?: { name: string; path: string; pro?: boolean; new?: boolean }[];
 };
 
+  // const currentTheme = localStorage.getItem("theme") || "light";
+ 
 const navItems: NavItem[] = [ 
    {
     icon: <img
@@ -90,7 +94,7 @@ const AppSidebar: React.FC = () => {
               {(isExpanded || isHovered || isMobileOpen) && ( 
 
                 <img
-                  src="/icons/grid.svg" 
+                  src="/icons/chevron-down.svg" 
                   style={{ display: 'inline-block' }}
                   className={`ml-auto w-5 h-5 transition-transform duration-200  ${
                             openSubmenu?.type === menuType &&

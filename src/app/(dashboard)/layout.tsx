@@ -10,14 +10,12 @@ const outfit = Outfit({
 });
 export default function AdminLayout({ children }: { children: React.ReactNode }) {
   return (
-        <html lang="en">
-      <body className={`${outfit.className} dark:bg-gray-900`}> 
-     <ThemeProvider> 
-      <SidebarProvider>
-        <AdminLayoutContent>{children}</AdminLayoutContent>
-      </SidebarProvider>
-    </ThemeProvider>
-          </body>
-    </html>
+    <div className={`${outfit.className} dark:bg-gray-900`}>
+      <ThemeProvider> 
+        <SidebarProvider>
+          <AdminLayoutContent>{children}</AdminLayoutContent>
+        </SidebarProvider>
+      </ThemeProvider>
+    </div> 
   );
 }

@@ -184,14 +184,14 @@ return (
     <div className="grid grid-cols-1 gap-6 xl:grid-cols-2">
       {/* Name Field */}
       <div>
-        <label>Name</label>
+        <label className="mb-1.5 block text-sm font-medium text-gray-700 dark:text-gray-400">Name</label>
         <div className="relative">
           <input
             type="text"
             onChange={(e) => handleNameChange(e.target.value)}
             name="name"
             placeholder="name"
-            className="dark:bg-dark-900 w-full h-11 rounded-lg border px-4 py-2.5 text-sm text-gray-900 dark:text-white"
+            className="input-style"
           />
           {errors.name && <p className="text-red-500 text-sm mt-1">{errors.name}</p>}
         </div>
@@ -199,14 +199,14 @@ return (
 
       {/* Email Field */}
       <div>
-        <label>Email</label>
+        <label className="mb-1.5 block text-sm font-medium text-gray-700 dark:text-gray-400">Email</label>
         <div className="relative">
           <input
             type="text"
             onChange={(e) => handleEmailChange(e.target.value)}
             name="email"
             placeholder="info@gmail.com"
-            className="dark:bg-dark-900 w-full h-11 rounded-lg border px-4 py-2.5 text-sm text-gray-900 dark:text-white"
+            className="input-style"
           />
           {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email}</p>}
         </div>
@@ -214,12 +214,12 @@ return (
 
       {/* Role Select */}
       <div>
-        <label>Role</label>
+        <label className="mb-1.5 block text-sm font-medium text-gray-700 dark:text-gray-400">Role</label>
         <div className="relative">
           <select
             name="role"
             onChange={(e) => handleSelectChange(e.target.value)}
-            className="dark:bg-dark-900 w-full h-11 rounded-lg border px-4 py-2.5 text-sm text-gray-900 dark:text-white"
+            className="input-style"
           >
             <option value="">select role</option>
             <option value="admin">Admin</option>
@@ -231,11 +231,11 @@ return (
 
       {/* DOB Field */}
       <div>
-        <label htmlFor="date">Date of birth:</label>
+        <label className="mb-1.5 block text-sm font-medium text-gray-700 dark:text-gray-400">Date of birth</label>
         <input
           id="date"
           type="text"
-          className="dark:bg-dark-900 w-full h-11 rounded-lg border px-4 py-2.5 text-sm text-gray-900 dark:text-white"
+          className="input-style"
           ref={dateInputRef}
           name="date"
           placeholder="Pick a date"
@@ -245,7 +245,7 @@ return (
 
       {/* Gender Radio Buttons */}
       <div className="flex flex-wrap items-center gap-8">
-        <label>Gender</label>
+        <label className="mb-1.5 block text-sm font-medium text-gray-700 dark:text-gray-400">Gender</label>
 
         {['m', 'f', 'o'].map((val, index) => (
           <label
@@ -282,6 +282,8 @@ return (
 
       {/* Image Upload */}
       <div className="flex flex-col gap-4 mt-6">
+        <label className="mb-1.5 block text-sm font-medium text-gray-700 dark:text-gray-400">Image</label>
+
         <input
           type="file"
           name="avatar" 
