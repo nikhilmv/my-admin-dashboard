@@ -23,6 +23,7 @@ Media uploads are handled via **Cloudinary**, and **JWT** is used for secure aut
 
 
 ## 🖥️ please find backend code from here - https://github.com/nikhilmv/my-admin-dashboard-backend**
+## 🖥️ exported databse json - [https://github.com/nikhilmv/my-admin-dashboard-backend](https://github.com/nikhilmv/my-admin-dashboard/blob/master/public/screenshots/my-admin-dashboard.users.json)**
 
 
 ![nodejs](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)&nbsp;
