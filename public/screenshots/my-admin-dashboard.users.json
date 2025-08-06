@@ -1,0 +1,163 @@
+[{
+  "_id": {
+    "$oid": "679e717b5d58ea44f28bd617"
+  },
+  "name": "John Doe",
+  "email": "johndoe@example.com",
+  "gender": "Male",
+  "password": "$2a$10$aYlD459SGjC9CPqsJt51zejERkiC6E3bmzUYHmoyfDJxIOdbSYBMK",
+  "role": "admin",
+  "createdAt": "2024-02-01T12:00:00Z"
+},
+{
+  "_id": {
+    "$oid": "688917dea3b01a97063b9d0e"
+  },
+  "name": "Oscar Rocha",
+  "email": "vozu@mailinator.com",
+  "gender": "f",
+  "password": "$2a$10$osoEsVFv1GUY7pe8zzhuCujLVaBCFkEnWTtF/V/ug/NHadz2czChe",
+  "dob": "2025-07-11",
+  "avatar": {
+    "public_id": "avatars/vwoxs0mjqugizrry268a",
+    "url": "https://res.cloudinary.com/ddbeel3w9/image/upload/v1753815005/avatars/vwoxs0mjqugizrry268a.jpg"
+  },
+  "role": "user",
+  "createdAt": {
+    "$date": "2025-07-29T18:50:06.997Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "688918b5cf640e528ebcee1b"
+  },
+  "name": "Phillip Graham",
+  "email": "wakuzyzugy@mailinator.com",
+  "gender": "m",
+  "password": "$2a$10$5e4uBZw.T6zfOclekt1/nO9ZQGCTeoNX6h7cRUldjgz5kjjKgsXzu",
+  "dob": "2025-07-10",
+  "avatar": {
+    "public_id": "avatars/mt6yeq9mn7wjyevhksvd",
+    "url": "https://res.cloudinary.com/ddbeel3w9/image/upload/v1753815219/avatars/mt6yeq9mn7wjyevhksvd.jpg"
+  },
+  "role": "user",
+  "createdAt": {
+    "$date": "2025-07-29T18:53:41.201Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "688a66288325cefd58b3e604"
+  },
+  "name": "Farrah Munoz",
+  "email": "sotudo@mailinator.com",
+  "gender": "o",
+  "password": "$2a$10$tOUyDcDWk0J9QhUjrHamdO59ZfJgrP4xtlQ2PWIQuY1/OUgwzuRZy",
+  "dob": "2025-07-30",
+  "avatar": {
+    "public_id": "avatars/z4h0yajmorqs91prew5x",
+    "url": "https://res.cloudinary.com/ddbeel3w9/image/upload/v1753900583/avatars/z4h0yajmorqs91prew5x.jpg"
+  },
+  "role": "admin",
+  "createdAt": {
+    "$date": "2025-07-30T18:36:24.951Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "688a67d98325cefd58b3e62d"
+  },
+  "name": "Kitra Mathews",
+  "email": "kyxyxupas@mailinator.com",
+  "gender": "m",
+  "password": "$2a$10$aGlRExW0T4H4B2bG3V0s5etcNaVq1PoxFCLcOE4.xCF66UkKX1k36",
+  "dob": "2025-07-10",
+  "avatar": {
+    "public_id": "avatars/pcuipehvtwdd6wtxmxq2",
+    "url": "https://res.cloudinary.com/ddbeel3w9/image/upload/v1753901016/avatars/pcuipehvtwdd6wtxmxq2.jpg"
+  },
+  "role": "user",
+  "createdAt": {
+    "$date": "2025-07-30T18:43:37.959Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "688a67ea8325cefd58b3e638"
+  },
+  "name": "Nehru Gillespie",
+  "email": "jeqynef@mailinator.com",
+  "gender": "f",
+  "password": "$2a$10$enPrg5ibobLcoi4PKzWIo.7CfjYl7N7a27Kk1CANAvJkotCF51dGS",
+  "dob": "2025-07-09",
+  "avatar": {
+    "public_id": "avatars/ezub8ngsnr5bcdy5k2lz",
+    "url": "https://res.cloudinary.com/ddbeel3w9/image/upload/v1753901033/avatars/ezub8ngsnr5bcdy5k2lz.jpg"
+  },
+  "role": "admin",
+  "createdAt": {
+    "$date": "2025-07-30T18:43:54.598Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "688a67fb8325cefd58b3e643"
+  },
+  "name": "Joelle Bishop",
+  "email": "gygy@mailinator.com",
+  "gender": "o",
+  "password": "$2a$10$py6E.Wq61VWXYsjjIfLrr.mqYkAUPjaekFdIMw8FY5v8HC9NLFEdW",
+  "dob": "2025-07-05",
+  "avatar": {
+    "public_id": "avatars/fdp5z6lpxex6iaj6ldat",
+    "url": "https://res.cloudinary.com/ddbeel3w9/image/upload/v1753901050/avatars/fdp5z6lpxex6iaj6ldat.jpg"
+  },
+  "role": "user",
+  "createdAt": {
+    "$date": "2025-07-30T18:44:11.973Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "688a682a8325cefd58b3e64e"
+  },
+  "name": "Quail Farrell",
+  "email": "jediruzyky@mailinator.com",
+  "gender": "o",
+  "password": "$2a$10$muqNqTddPk7U07UNVQeDbuuYP4rp6ZoQiyJhy6wF6pcSJ/0BmJz9e",
+  "dob": "2025-07-11",
+  "avatar": {
+    "public_id": "avatars/cnyed0kohlemlvlu8hfe",
+    "url": "https://res.cloudinary.com/ddbeel3w9/image/upload/v1753901097/avatars/cnyed0kohlemlvlu8hfe.jpg"
+  },
+  "role": "user",
+  "createdAt": {
+    "$date": "2025-07-30T18:44:58.811Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "688a683e8325cefd58b3e659"
+  },
+  "name": "Lunea Price",
+  "email": "ludizyg@mailinator.com",
+  "gender": "f",
+  "password": "$2a$10$.Sx3Ha4HqZl62spGOQkgN.4ypxSZcGgxUbc9y6wPKN7A1FJl2iN3S",
+  "dob": "2025-07-12",
+  "avatar": {
+    "public_id": "avatars/n7uc87h8agrfh16uwp7u",
+    "url": "https://res.cloudinary.com/ddbeel3w9/image/upload/v1753901116/avatars/n7uc87h8agrfh16uwp7u.jpg"
+  },
+  "role": "user",
+  "createdAt": {
+    "$date": "2025-07-30T18:45:18.086Z"
+  },
+  "__v": 0
+}]
